@@ -181,6 +181,9 @@
 <li><p>使用指定数据库，default为数据库名</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;use default;</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>查看所有表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;show tables;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>创建表，t1为表名，指定使用制表符 <strong>\t</strong>分割字段，行间用回车换行 <strong>\n</strong> 分割，STORED AS TEXTFILE指定文件存储格式为文本文件。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;CREATE TABLE t1(id int,username string) ROW FORMAT DELIMITED FIELDS TERMINATED BY &apos;\t&apos;LINES TERMINATED BY &apos;\n&apos;STORED AS TEXTFILE;</span><br></pre></td></tr></table></figure>
 </li>
@@ -189,6 +192,9 @@
 </li>
 <li><p>清空表</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">truncate table 表名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看表结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;describe 表名;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 
@@ -413,7 +419,7 @@
       
         <h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><p>无数次听说大数据这个词了，一直没有下定决心了解，可能是因为我太懒吧，从事java第5个年头了，每天忙（平）忙（淡）碌（无）碌（味）的生活，真是够了，找点事情干吧，决定开始研究大数据。</p>
 <h3 id="时代背景"><a href="#时代背景" class="headerlink" title="时代背景"></a>时代背景</h3><p>数据正在迅速膨胀并变大，它决定着企业的未来发展，虽然很多企业可能并没有意识到数据爆炸性增长带来问题的隐患，但是随着时间的推移，人们将越来越多的意识到数据对企业的重要性。</p>
-<h3 id="什么是大数据"><a href="#什么是大数据" class="headerlink" title="什么是大数据"></a>什么是大数据</h3><p>字面理解就是很多的数据。我理解大数据包括两部分，第一就是字面理解，第二也是最重要的方面，就是数据提供给你，你能用来做什么，怎么做，也就是数据处理和分析了，围绕数据产生的一系列行业和行为都被一股脑称为大数据了，以上是我的理解，不喜勿碰哈。</p>
+<h3 id="什么是大数据"><a href="#什么是大数据" class="headerlink" title="什么是大数据"></a>什么是大数据</h3><p>字面理解就是很多的数据。我理解大数据包括两部分，第一就是字面理解，第二也是最重要的方面，就是数据提供给你，你能用来做什么，怎么做，也就是数据处理和分析了，围绕数据产生的一系列行业和行为都被一股脑称为大数据了，以上是我的理解，不喜勿喷哈。</p>
 
       
 
