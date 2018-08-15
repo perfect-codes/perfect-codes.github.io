@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>miracle的博客</title>
+  <title>Tag: hive | miracle的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="keywords" content="个人,博客,技术">
 <meta property="og:type" content="website">
 <meta property="og:title" content="miracle的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/hive/index.html">
 <meta property="og:site_name" content="miracle的博客">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -135,70 +135,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hive" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/08/14/hive/" class="archive-article-date">
+  	<time datetime="2018-08-14T12:02:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/14/hive/">hive安装及简单使用</a>
+      <a class="archive-article-title" href="/2018/08/14/hive/">hive安装及简单使用</a>
     </h1>
   
 
-        
-        <a href="/2018/08/14/hive/" class="archive-article-date">
-  	<time datetime="2018-08-14T12:02:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
-<li>确保本地已经有hadoop环境，因为hive是基于HDFS的</li>
-<li>访问<a href="https://hive.apache.org/" target="_blank" rel="noopener">hive官网</a>下载最新的包，选择基于本地安装好的hadoop版本，hive下载页面有相应的版本说明，我这里用的是2.3.0。</li>
-<li>解压下载下来的压缩包</li>
-<li>复制hive-env.sh.template文件并更名为hive-env.sh，复制hive-default.xml.template文件并更名为hive-site.xml。</li>
-<li><p>修改hive-env.sh文件，增加HADOOP_HOME配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HADOOP_HOME=/Users/xpf/Documents/01develop/99library/hadoop-2.8.3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改hive-site.xml文件，将元数据从默认的derby数据库配置改为mysql数据库，原因有两个，首先derby只能连接一个client，其次我本地使用derby执行hive命令会报莫名其妙的错误，例如：不能初始化数据库。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--hive metastore with mysql--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;jdbc:mysql://localhost:3306/hivemetastore?createDatabaseIfNotExist=true&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;JDBC connect string for a JDBC metastore&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;javax.jdo.option.ConnectionDriverName&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;com.mysql.jdbc.Driver&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;Driver class name for a JDBC metastore&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;javax.jdo.option.ConnectionUserName&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;root&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;username to use against metastore database&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;javax.jdo.option.ConnectionPassword&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;123456&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;password to use against metastore database&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--cli header message--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;hive.cli.print.header&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;Whether to print the names of the columns in query output.&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;hive.cli.print.current.db&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;Whether to include the current database in the Hive prompt.&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改hive-site.xml文件，替换所有变量为实际路径，例如${system:java.io.tmpdir}、${system:user.name}、${hive.session.id}等。</p>
-</li>
-<li><p>启动hive，此时会在mysql中创建上边配置的数据库<strong>hivemetastore</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hive</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>也可以直接hive启动，需要修改环境变量，配置hive的执行文件路径到path。</p>
-</li>
-</ol>
-<h3 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h3><ol>
-<li><p>查看所有数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;show databases;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用指定数据库，default为数据库名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;use default;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建表，t1为表名，指定使用制表符 <strong>\t</strong>分割字段，行间用回车换行 <strong>\n</strong> 分割，STORED AS TEXTFILE指定文件存储格式为文本文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;CREATE TABLE t1(id int,username string) ROW FORMAT DELIMITED FIELDS TERMINATED BY &apos;\t&apos;LINES TERMINATED BY &apos;\n&apos;STORED AS TEXTFILE;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>从本地文件导入数据，去掉<em>local</em>就是从HDFS文件导入数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;load data local inpath &apos;/Users/xxx/Desktop/htest.txt&apos; into table t1;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>清空表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">truncate table 表名</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -214,349 +178,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/14/hive/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/14/hexo/">hexo常用指令</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/14/hexo/" class="archive-article-date">
-  	<time datetime="2018-08-14T11:42:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h4><pre><code>hexo version
-</code></pre><h4 id="创建站点"><a href="#创建站点" class="headerlink" title="创建站点"></a>创建站点</h4><pre><code>hexo init 站点名称
-</code></pre><h4 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h4><pre><code>hexo new 文件名称
-</code></pre><h4 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h4><pre><code>hexo generate 简写为 hexo g
-</code></pre><h4 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h4><pre><code>hexo server 简写为 hexo s
-访问网址为： http://localhost:4000/
-</code></pre><h4 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h4><pre><code>hexo deploy 简写为 hexo d
-</code></pre><h4 id="清空静态文件"><a href="#清空静态文件" class="headerlink" title="清空静态文件"></a>清空静态文件</h4><pre><code>hexo clean
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/14/hexo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hadoop" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/hadoop/">hadoop环境搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/30/hadoop/" class="archive-article-date">
-  	<time datetime="2018-07-30T04:06:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/hadoop/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-bigdata" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/bigdata/">我的大数据之旅</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/30/bigdata/" class="archive-article-date">
-  	<time datetime="2018-07-30T03:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><p>无数次听说大数据这个词了，一直没有下定决心了解，可能是因为我太懒吧，从事java第5个年头了，每天忙（平）忙（淡）碌（无）碌（味）的生活，真是够了，找点事情干吧，决定开始研究大数据。</p>
-<h3 id="时代背景"><a href="#时代背景" class="headerlink" title="时代背景"></a>时代背景</h3><p>数据正在迅速膨胀并变大，它决定着企业的未来发展，虽然很多企业可能并没有意识到数据爆炸性增长带来问题的隐患，但是随着时间的推移，人们将越来越多的意识到数据对企业的重要性。</p>
-<h3 id="什么是大数据"><a href="#什么是大数据" class="headerlink" title="什么是大数据"></a>什么是大数据</h3><p>字面理解就是很多的数据。我理解大数据包括两部分，第一就是字面理解，第二也是最重要的方面，就是数据提供给你，你能用来做什么，怎么做，也就是数据处理和分析了，围绕数据产生的一系列行业和行为都被一股脑称为大数据了，以上是我的理解，不喜勿碰哈。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/bigdata/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-markdown" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/28/markdown/">markdown</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/28/markdown/" class="archive-article-date">
-  	<time datetime="2018-07-27T16:22:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h3><h4 id="宗旨"><a href="#宗旨" class="headerlink" title="宗旨"></a>宗旨</h4><p>Markdown的目标是「易读易写」</p>
-<h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><p>行首插入1～6个#对应六级标题</p>
-<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p>行首插入一个&gt;表示一级引用，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 我需要三件东西：爱情友谊和图书。然而这三者之间何其相通！炽热的爱情可以充实图书的内容，图书又是人们最忠实的朋友。</span><br><span class="line">&gt; ——蒙田</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>我需要三件东西：爱情友谊和图书。然而这三者之间何其相通！炽热的爱情可以充实图书的内容，图书又是人们最忠实的朋友。<br>——蒙田</p>
-</blockquote>
-<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>行首插入一个*|+|-都可以，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 列表条目一</span><br><span class="line">* 列表条目二</span><br><span class="line">* 列表条目三</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>列表条目一</li>
-<li>列表条目二</li>
-<li>列表条目三<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3>数字接着一个英文句点，例如<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 列表条目一</span><br><span class="line">2. 列表条目二</span><br><span class="line">3. 列表条目三</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol>
-<li>列表条目一</li>
-<li>列表条目二</li>
-<li>列表条目三<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3>缩进 4 个空格或是 1 个制表符就可以<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3>用三个以上的星号、减号、底线来建立一个分隔线<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3>链接文字都是用 [方括号] 来标记，要建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This is [an example](http://example.com/ &quot;Title&quot;) inline link.</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>This is <a href="http://example.com/" title="Title" target="_blank" rel="noopener">an example</a> inline link.</p>
-<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*single asterisks*</span><br><span class="line"></span><br><span class="line">_single underscores_</span><br><span class="line"></span><br><span class="line">**double asterisks**</span><br><span class="line"></span><br><span class="line">__double underscores__</span><br></pre></td></tr></table></figure>
-<p><em>single asterisks</em></p>
-<p><em>single underscores</em></p>
-<p><strong>double asterisks</strong></p>
-<p><strong>double underscores</strong></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>如果要标记一小段行内代码，你可以用反引号把它包起来（`），例如</p>
-<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>图片与链接一样，使用中括号，区别是需要在前边增加叹号！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/28/markdown/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -578,10 +212,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
