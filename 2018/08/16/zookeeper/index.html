@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>hexo常用指令 | miracle的博客</title>
+  <title>zookeeper集群搭建及介绍 | miracle的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="查看版本hexo version 创建站点hexo init 站点名称 创建页面hexo new 文件名称 生成静态文件hexo generate 简写为 hexo g 本地预览hexo server 简写为 hexo s 访问网址为： http://localhost:4000/ 发布hexo deploy 简写为 hexo d 清空静态文件hexo clean">
-<meta name="keywords" content="个人,博客,技术">
+  <meta name="description" content="搭建jdk环境121. 下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html2. RPM安装命令：rpm -ivh RPM包名 zookeeper安装1234567891011121314151617181920212223242526272829301. 官网地址：http://zookeeper.apac">
+<meta name="keywords" content="大数据,分布式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo常用指令">
-<meta property="og:url" content="http://yoursite.com/2018/08/14/hexo/index.html">
+<meta property="og:title" content="zookeeper集群搭建及介绍">
+<meta property="og:url" content="http://yoursite.com/2018/08/16/zookeeper/index.html">
 <meta property="og:site_name" content="miracle的博客">
-<meta property="og:description" content="查看版本hexo version 创建站点hexo init 站点名称 创建页面hexo new 文件名称 生成静态文件hexo generate 简写为 hexo g 本地预览hexo server 简写为 hexo s 访问网址为： http://localhost:4000/ 发布hexo deploy 简写为 hexo d 清空静态文件hexo clean">
+<meta property="og:description" content="搭建jdk环境121. 下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html2. RPM安装命令：rpm -ivh RPM包名 zookeeper安装1234567891011121314151617181920212223242526272829301. 官网地址：http://zookeeper.apac">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-14T11:58:48.425Z">
+<meta property="og:updated_time" content="2018-08-16T02:17:59.712Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo常用指令">
-<meta name="twitter:description" content="查看版本hexo version 创建站点hexo init 站点名称 创建页面hexo new 文件名称 生成静态文件hexo generate 简写为 hexo g 本地预览hexo server 简写为 hexo s 访问网址为： http://localhost:4000/ 发布hexo deploy 简写为 hexo d 清空静态文件hexo clean">
+<meta name="twitter:title" content="zookeeper集群搭建及介绍">
+<meta name="twitter:description" content="搭建jdk环境121. 下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html2. RPM安装命令：rpm -ivh RPM包名 zookeeper安装1234567891011121314151617181920212223242526272829301. 官网地址：http://zookeeper.apac">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -137,35 +137,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-zookeeper" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      hexo常用指令
+      zookeeper集群搭建及介绍
     </h1>
   
 
         
-        <a href="/2018/08/14/hexo/" class="archive-article-date">
-  	<time datetime="2018-08-14T11:42:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
+        <a href="/2018/08/16/zookeeper/" class="archive-article-date">
+  	<time datetime="2018-08-16T01:33:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h4><pre><code>hexo version
-</code></pre><h4 id="创建站点"><a href="#创建站点" class="headerlink" title="创建站点"></a>创建站点</h4><pre><code>hexo init 站点名称
-</code></pre><h4 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h4><pre><code>hexo new 文件名称
-</code></pre><h4 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h4><pre><code>hexo generate 简写为 hexo g
-</code></pre><h4 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h4><pre><code>hexo server 简写为 hexo s
-访问网址为： http://localhost:4000/
-</code></pre><h4 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h4><pre><code>hexo deploy 简写为 hexo d
-</code></pre><h4 id="清空静态文件"><a href="#清空静态文件" class="headerlink" title="清空静态文件"></a>清空静态文件</h4><pre><code>hexo clean
-</code></pre>
+        <h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><h5 id="jdk环境"><a href="#jdk环境" class="headerlink" title="jdk环境"></a>jdk环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html</span><br><span class="line">2. RPM安装命令：rpm -ivh RPM包名</span><br></pre></td></tr></table></figure>
+<h5 id="zookeeper安装"><a href="#zookeeper安装" class="headerlink" title="zookeeper安装"></a>zookeeper安装</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">1. 官网地址：http://zookeeper.apache.org/</span><br><span class="line">2. 解压：tar zxvf zookeeper-3.4.8.tar.gz</span><br><span class="line">3. 重命名 mv zookeeper-3.4.8 /opt/zookeeper</span><br><span class="line">4. 配置/etc/hosts，建议一次性修改所有服务器，避免遗漏</span><br><span class="line">    192.168.0.1    zkserver1</span><br><span class="line">    192.168.0.2    zkserver2</span><br><span class="line">    192.168.0.3    zkserver3</span><br><span class="line">5. 创建配置文件：conf/zoo_sample.cfg conf/zoo.cfg</span><br><span class="line">6. 配置文件zoo.cfg修改如下：</span><br><span class="line">    tickTime=2000</span><br><span class="line">    initLimit=10</span><br><span class="line">    syncLimit=5</span><br><span class="line">    dataLogDir=/opt/zookeeper/logs</span><br><span class="line">    dataDir=/opt/zookeeper/data</span><br><span class="line">    clientPort=2181</span><br><span class="line">    autopurge.snapRetainCount=500</span><br><span class="line">    autopurge.purgeInterval=24</span><br><span class="line">    #格式server.A = B : C : D</span><br><span class="line">    server.1= zkserver1:2888:3888</span><br><span class="line">    server.2= zkserver2:2888:3888</span><br><span class="line">    server.3= zkserver3:2888:3888</span><br><span class="line">7. 创建上一步中配置的两个目录dataLogDir、dataDir</span><br><span class="line">    mkdir -p /opt/zookeeper/&#123;logs,data&#125;</span><br><span class="line">8. 创建serverId标识</span><br><span class="line">    echo &quot;1&quot; &gt; /opt/zookeeper/data/myid</span><br><span class="line">9. 将配置好的内容分发到其它服务器</span><br><span class="line">    scp -r /opt/zookeeper </span><br><span class="line">10. 修改各个服务器上的myid文件与server.A的A一致</span><br><span class="line">11. 各个服务器顺次启动：</span><br><span class="line">    bin/zkServer.sh start</span><br></pre></td></tr></table></figure>
+<h5 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. 启动报错：配置文件错误或者防火墙没有关闭</span><br></pre></td></tr></table></figure>
+<h5 id="状态检查"><a href="#状态检查" class="headerlink" title="状态检查"></a>状态检查</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/zkServer.sh status</span><br></pre></td></tr></table></figure>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
+<p>ZooKeeper是一个开放源码的分布式应用程序协调服务，它包含一个简单的原语集，分布式应用程序可以基于它实现同步服务，配置维护和命名服务等。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">在zookeeper的集群中，各个节点共有下面3种角色和4种状态：</span><br><span class="line">角色：leader,follower,observer</span><br><span class="line">状态：leading,following,observing,looking</span><br><span class="line"></span><br><span class="line">Zookeeper的核心是原子广播，这个机制保证了各个Server之间的同步。实现这个机制的协议叫做Zab协议（ZooKeeper Atomic Broadcast protocol）。Zab协议有两种模式，它们分别是恢复模式（Recovery选主）和广播模式（Broadcast同步）。当服务启动或者在领导者崩溃后，Zab就进入了恢复模式，当领导者被选举出来，且大多数Server完成了和leader的状态同步以后，恢复模式就结束了。状态同步保证了leader和Server具有相同的系统状态。</span><br><span class="line">为了保证事务的顺序一致性，zookeeper采用了递增的事务id号（zxid）来标识事务。所有的提议（proposal）都在被提出的时候加上了zxid。实现中zxid是一个64位的数字，它高32位是epoch用来标识leader关系是否改变，每次一个leader被选出来，它都会有一个新的epoch，标识当前属于那个leader的统治时期。低32位用于递增计数。</span><br><span class="line"></span><br><span class="line">每个Server在工作过程中有4种状态：</span><br><span class="line">LOOKING：当前Server不知道leader是谁，正在搜寻。</span><br><span class="line">LEADING：当前Server即为选举出来的leader。</span><br><span class="line">FOLLOWING：leader已经选举出来，当前Server与之同步。</span><br><span class="line">OBSERVING：observer的行为在大多数情况下与follower完全一致，但是他们不参加选举和投票，而仅仅接受(observing)选举和投票的结果。</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
       
 
       
@@ -204,6 +203,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">分布式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -254,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/14/hexo/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/16/zookeeper/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -268,18 +282,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/14/hive/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/08/16/kafka/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          hive安装及简单使用
+          kafka安装及简单使用
         
       </div>
     </a>
   
   
-    <a href="/2018/07/30/hadoop/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hadoop环境搭建</div>
+    <a href="/2018/08/15/sqoop/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sqoop安装及简单使用</div>
       <i class="icon-circle-right"></i>
     </a>
   
