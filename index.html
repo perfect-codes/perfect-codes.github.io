@@ -142,7 +142,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/21/wordcount/">MapReduce之单词计数器wordcount</a>
+      <a class="article-title" href="/2018/08/21/wordcount/">MapReduce之单词计数器wordcount测试运行</a>
     </h1>
   
 
@@ -159,7 +159,10 @@
 <h3 id="wordcount-txt文件最终格式如下"><a href="#wordcount-txt文件最终格式如下" class="headerlink" title="wordcount.txt文件最终格式如下"></a>wordcount.txt文件最终格式如下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">﻿xpf@server1:/tmp$ cat wordcount.txt </span><br><span class="line">hello</span><br><span class="line">hello hadoop</span><br><span class="line">hello xpf</span><br></pre></td></tr></table></figure>
 <h3 id="上传到hdfs"><a href="#上传到hdfs" class="headerlink" title="上传到hdfs"></a>上传到hdfs</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">创建目录：</span><br><span class="line">xpf@server1:/tmp$ hdfs dfs -mkdir -p /work/data/input</span><br><span class="line">上传文件：</span><br><span class="line">xpf@server1:/tmp$ hdfs dfs -put wordcount.txt /work/data/input</span><br></pre></td></tr></table></figure>
 <h3 id="查看是否成功"><a href="#查看是否成功" class="headerlink" title="查看是否成功"></a>查看是否成功</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xpf@server1:/tmp$ hdfs dfs -ls /work/data/input</span><br></pre></td></tr></table></figure>
-<h3 id="执行hadoop命令"><a href="#执行hadoop命令" class="headerlink" title="执行hadoop命令"></a>执行hadoop命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="执行hadoop运算"><a href="#执行hadoop运算" class="headerlink" title="执行hadoop运算"></a>执行hadoop运算</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">﻿hadoop jar /opt/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.3.jar wordcount /work/data/input /work/data/w1</span><br></pre></td></tr></table></figure>
+<h3 id="查看运算输出文件"><a href="#查看运算输出文件" class="headerlink" title="查看运算输出文件"></a>查看运算输出文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">﻿hdfs dfs -ls /work/data/w1</span><br></pre></td></tr></table></figure>
+<h3 id="查看运算结果"><a href="#查看运算结果" class="headerlink" title="查看运算结果"></a>查看运算结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">﻿hdfs dfs -cat /work/data/w1/part-r-00000</span><br></pre></td></tr></table></figure>
+<h3 id="结果如下"><a href="#结果如下" class="headerlink" title="结果如下"></a>结果如下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hadoop	1</span><br><span class="line">hello	3</span><br><span class="line">xpf	1</span><br></pre></td></tr></table></figure>
 
       
 
