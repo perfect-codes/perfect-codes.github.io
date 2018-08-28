@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>miracle的博客</title>
+  <title>elasticsearch安装及简单使用 | miracle的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="个人,博客,技术">
-<meta property="og:type" content="website">
-<meta property="og:title" content="miracle的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="安装1.下载1地址：https://www.elastic.co/downloads/elasticsearch 2.解压移动12tar zxvf elasticsearch-6.4.0.tar.gzmv elasticsearch-6.4.0.tar.gz /opt/elasticsearch 3.启动1/opt/elasticsearch/bin/elasticsearch 简单使用1.查看e">
+<meta name="keywords" content="大数据,搜索引擎">
+<meta property="og:type" content="article">
+<meta property="og:title" content="elasticsearch安装及简单使用">
+<meta property="og:url" content="http://yoursite.com/2018/08/28/elasticsearch/index.html">
 <meta property="og:site_name" content="miracle的博客">
+<meta property="og:description" content="安装1.下载1地址：https://www.elastic.co/downloads/elasticsearch 2.解压移动12tar zxvf elasticsearch-6.4.0.tar.gzmv elasticsearch-6.4.0.tar.gz /opt/elasticsearch 3.启动1/opt/elasticsearch/bin/elasticsearch 简单使用1.查看e">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-28T11:09:33.561Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="miracle的博客">
+<meta name="twitter:title" content="elasticsearch安装及简单使用">
+<meta name="twitter:description" content="安装1.下载1地址：https://www.elastic.co/downloads/elasticsearch 2.解压移动12tar zxvf elasticsearch-6.4.0.tar.gzmv elasticsearch-6.4.0.tar.gz /opt/elasticsearch 3.启动1/opt/elasticsearch/bin/elasticsearch 简单使用1.查看e">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -133,16 +137,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-elasticsearch" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-elasticsearch" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/28/elasticsearch/">elasticsearch安装及简单使用</a>
+    <h1 class="article-title" itemprop="name">
+      elasticsearch安装及简单使用
     </h1>
   
 
@@ -173,6 +175,37 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -195,16 +228,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/28/elasticsearch/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/28/elasticsearch/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/22/hbase/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hbase集群搭建及简单使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -224,758 +316,14 @@
 
 
 
-
-  
-    <article id="post-hbase" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/22/hbase/">hbase集群搭建及简单使用</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/22/hbase/" class="archive-article-date">
-  	<time datetime="2018-08-22T06:26:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><h5 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h5><ol>
-<li>jdk环境</li>
-<li>zookeeper环境 <a href="/2018/08/16/zookeeper/" title="详细步骤">详细步骤</a></li>
-<li>hadoop环境 <a href="/2018/07/30/hadoop/" title="详细步骤">详细步骤</a><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5>1.下载安装包<br>2.解压重命名<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf ﻿hbase-2.1.0-bin.tar.gz</span><br><span class="line">mv ﻿hbase-2.1.0-bin /opt/hbase</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>3.修改conf/hbase-env.sh文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/opt/jdk</span><br><span class="line">export HBASE_CLASSPATH=/opt/hbase/lib/*.jar</span><br><span class="line">export HBASE_MANAGES_ZK=false</span><br></pre></td></tr></table></figure></p>
-<p>4.修改conf/habse-site.xml文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">﻿&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hbase.rootdir&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;hdfs://server1:9000/hbase&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hbase.master&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;server1&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hbase.cluster.distributed&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hbase.zookeeper.property.clientPort&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;2181&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;hbase.zookeeper.quorum&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;server1,server2,server3&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;zookeeper.session.timeout&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;60000000&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;dfs.support.append&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure></p>
-<p>5.修改conf/regionservers<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">server2</span><br><span class="line">server3</span><br></pre></td></tr></table></figure></p>
-<p>6.同步到server2和server3服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r /opt/hbase xpf@server2:/opt</span><br><span class="line">scp -r /opt/hbase xpf@server3:/opt</span><br></pre></td></tr></table></figure></p>
-<p>7.启动（只在server1执行）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/habse/bin/start-hbase.sh</span><br></pre></td></tr></table></figure></p>
-<p><strong>如果启动报类加载不到的错误,则执行以下命令：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /opt/hbase/lib/client-facing-thirdparty/htrace-core-3.1.0-incubating.jar /opt/hbase/lib/</span><br></pre></td></tr></table></figure></p>
-<h3 id="简单使用（shell方式）"><a href="#简单使用（shell方式）" class="headerlink" title="简单使用（shell方式）"></a>简单使用（shell方式）</h3><p>1.查看版本version<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hbase(main):001:0&gt; version</span><br><span class="line">2.1.0, re1673bb0bbfea21d6e5dba73e013b09b8b49b89b, Tue Jul 10 17:26:48 CST 2018</span><br><span class="line">Took 0.0137 seconds</span><br></pre></td></tr></table></figure></p>
-<p>2.查看状态status<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hbase(main):002:0&gt; status</span><br><span class="line">1 active master, 0 backup masters, 2 servers, 0 dead, 1.0000 average load</span><br><span class="line">Took 0.7978 seconds</span><br></pre></td></tr></table></figure></p>
-<p>3.列出表list<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">﻿hbase(main):004:0&gt; list</span><br><span class="line">TABLE                                                                                                  </span><br><span class="line">0 row(s)</span><br><span class="line">Took 0.0847 seconds                                                                                    </span><br><span class="line">=&gt; []</span><br></pre></td></tr></table></figure></p>
-<p>4.创建表create<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">﻿hbase(main):005:0&gt; create &apos;user&apos;,&apos;baseinfo&apos;</span><br><span class="line">Created table user</span><br><span class="line">Took 1.5118 seconds                                                                                    </span><br><span class="line">=&gt; Hbase::Table - user</span><br></pre></td></tr></table></figure></p>
-<p>5.插入数据put(格式：put 表,行健,列,值)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">﻿hbase(main):008:0&gt; put &apos;user&apos;,&apos;0001&apos;,&apos;baseinfo:name&apos;,&apos;xpf&apos;</span><br><span class="line">Took 0.3467 seconds</span><br></pre></td></tr></table></figure></p>
-<p>6.获取数据get(格式：get 表,行健[,列])<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">﻿hbase(main):010:0&gt; get &apos;user&apos;,&apos;0001&apos;,&apos;baseinfo:name&apos;</span><br><span class="line">COLUMN                     CELL                                                                        </span><br><span class="line"> baseinfo:name             timestamp=1534994966974, value=xpf                                          </span><br><span class="line">1 row(s)</span><br><span class="line">Took 0.1153 seconds</span><br></pre></td></tr></table></figure></p>
-<p>7.列出表中全部数据scan<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">﻿hbase(main):011:0&gt; scan &apos;user&apos;</span><br><span class="line">ROW                        COLUMN+CELL                                                                 </span><br><span class="line"> 0001                      column=baseinfo:name, timestamp=1534994966974, value=xpf                    </span><br><span class="line">1 row(s)</span><br><span class="line">Took 0.0599 seconds</span><br></pre></td></tr></table></figure></p>
-<p>8.删除指定行列的数据delete<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">﻿hbase(main):012:0&gt; delete &apos;user&apos;,&apos;0001&apos;,&apos;baseinfo:name&apos;</span><br><span class="line">Took 0.0480 seconds</span><br></pre></td></tr></table></figure></p>
-<p>9.删除一行数据deleteall<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">﻿hbase(main):018:0&gt; deleteall &apos;user&apos;,&apos;0001&apos;</span><br><span class="line">Took 0.0171 seconds</span><br></pre></td></tr></table></figure></p>
-<p>10.统计行数量count<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">﻿hbase(main):019:0&gt; count &apos;user&apos;</span><br><span class="line">0 row(s)</span><br><span class="line">Took 0.1239 seconds</span><br></pre></td></tr></table></figure></p>
-<p>11.清空表truncate<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">﻿hbase(main):023:0&gt; truncate &apos;user&apos;</span><br><span class="line">Truncating &apos;user&apos; table (it may take a while):</span><br><span class="line">Disabling table...</span><br><span class="line">Truncating table...</span><br><span class="line">Took 2.2386 seconds</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/22/hbase/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-wordcount" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/21/wordcount/">MapReduce之单词计数器wordcount测试运行</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/21/wordcount/" class="archive-article-date">
-  	<time datetime="2018-08-21T06:01:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="准备数据文件"><a href="#准备数据文件" class="headerlink" title="准备数据文件"></a>准备数据文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">将文件创建在tmp目录下</span><br><span class="line">﻿xpf@server1:~$ cd tmp</span><br><span class="line">写入数据到wordcount.txt文件</span><br><span class="line">﻿xpf@server1:/tmp$ echo &quot;hello hadoop&quot; &gt;&gt; wordcount.txt</span><br><span class="line">﻿xpf@server1:/tmp$ echo &quot;hello xpf&quot; &gt;&gt; wordcount.txt</span><br><span class="line">﻿xpf@server1:/tmp$ echo &quot;hello&quot; &gt;&gt; wordcount.txt</span><br></pre></td></tr></table></figure>
-<h3 id="wordcount-txt文件最终格式如下"><a href="#wordcount-txt文件最终格式如下" class="headerlink" title="wordcount.txt文件最终格式如下"></a>wordcount.txt文件最终格式如下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">﻿xpf@server1:/tmp$ cat wordcount.txt </span><br><span class="line">hello</span><br><span class="line">hello hadoop</span><br><span class="line">hello xpf</span><br></pre></td></tr></table></figure>
-<h3 id="上传到hdfs"><a href="#上传到hdfs" class="headerlink" title="上传到hdfs"></a>上传到hdfs</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">创建目录：</span><br><span class="line">xpf@server1:/tmp$ hdfs dfs -mkdir -p /work/data/input</span><br><span class="line">上传文件：</span><br><span class="line">xpf@server1:/tmp$ hdfs dfs -put wordcount.txt /work/data/input</span><br></pre></td></tr></table></figure>
-<h3 id="查看是否成功"><a href="#查看是否成功" class="headerlink" title="查看是否成功"></a>查看是否成功</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xpf@server1:/tmp$ hdfs dfs -ls /work/data/input</span><br></pre></td></tr></table></figure>
-<h3 id="执行hadoop运算"><a href="#执行hadoop运算" class="headerlink" title="执行hadoop运算"></a>执行hadoop运算</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">﻿hadoop jar /opt/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.3.jar wordcount /work/data/input /work/data/w1</span><br></pre></td></tr></table></figure>
-<h3 id="查看运算输出文件"><a href="#查看运算输出文件" class="headerlink" title="查看运算输出文件"></a>查看运算输出文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">﻿hdfs dfs -ls /work/data/w1</span><br></pre></td></tr></table></figure>
-<h3 id="查看运算结果"><a href="#查看运算结果" class="headerlink" title="查看运算结果"></a>查看运算结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">﻿hdfs dfs -cat /work/data/w1/part-r-00000</span><br></pre></td></tr></table></figure>
-<h3 id="结果如下"><a href="#结果如下" class="headerlink" title="结果如下"></a>结果如下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hadoop	1</span><br><span class="line">hello	3</span><br><span class="line">xpf	1</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">mapreduce</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/21/wordcount/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-azkaban" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/17/azkaban/">azkaban安装及简单使用</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/17/azkaban/" class="archive-article-date">
-  	<time datetime="2018-08-17T09:28:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>工作流调度系统服务，重要用于大数据行业。</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/17/azkaban/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-flume" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/17/flume/">flume</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/17/flume/" class="archive-article-date">
-  	<time datetime="2018-08-17T06:25:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/17/flume/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-mahout" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/17/mahout/">mahout安装及简单使用</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/17/mahout/" class="archive-article-date">
-  	<time datetime="2018-08-17T06:19:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>mahout是一个机器学习领域算法库，基于hadoop，常用于推荐引擎、分类、聚类。</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/17/mahout/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-kafka" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/16/kafka/">kafka安装及简单使用</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/16/kafka/" class="archive-article-date">
-  	<time datetime="2018-08-16T04:26:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. zookeeper环境</span><br><span class="line">2. 下载安装包：http://kafka.apache.org/downloads</span><br><span class="line">3. 解压：tar zxvf kafka_2.11-2.0.0.tgz</span><br><span class="line">4. 重命名：mv kafka_2.11-2.0.0 /opt/kafka</span><br><span class="line">5. 启动zookeeper</span><br><span class="line">5. 启动kafka服务：./bin/kafka-server-start.sh config/server.properties</span><br></pre></td></tr></table></figure>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">启动前一定要先启动zookeeper</span><br></pre></td></tr></table></figure>
-<h3 id="使用-standalone"><a href="#使用-standalone" class="headerlink" title="使用(standalone)"></a>使用(standalone)</h3><h5 id="启动kafka服务"><a href="#启动kafka服务" class="headerlink" title="启动kafka服务"></a>启动kafka服务</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/kafka-server-start.sh config/server.properties</span><br></pre></td></tr></table></figure>
-<h5 id="创建topic"><a href="#创建topic" class="headerlink" title="创建topic"></a>创建topic</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test</span><br></pre></td></tr></table></figure>
-<h5 id="查看已存在的topic"><a href="#查看已存在的topic" class="headerlink" title="查看已存在的topic"></a>查看已存在的topic</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br></pre></td></tr></table></figure>
-<h5 id="启动生产者实例producer"><a href="#启动生产者实例producer" class="headerlink" title="启动生产者实例producer"></a>启动生产者实例producer</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test</span><br></pre></td></tr></table></figure>
-<h5 id="启动消费者实例consumer"><a href="#启动消费者实例consumer" class="headerlink" title="启动消费者实例consumer"></a>启动消费者实例consumer</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning</span><br></pre></td></tr></table></figure>
-<p>之后可以在生产者命令行中输入内容，可以看到消费者命令行会完整输出，简单吧。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">分布式</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MQ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/16/kafka/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-zookeeper" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/16/zookeeper/">zookeeper集群搭建及介绍</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/16/zookeeper/" class="archive-article-date">
-  	<time datetime="2018-08-16T01:33:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><h5 id="jdk环境"><a href="#jdk环境" class="headerlink" title="jdk环境"></a>jdk环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html</span><br><span class="line">2. RPM安装命令：rpm -ivh RPM包名</span><br></pre></td></tr></table></figure>
-<h5 id="zookeeper安装"><a href="#zookeeper安装" class="headerlink" title="zookeeper安装"></a>zookeeper安装</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">1. 官网地址：http://zookeeper.apache.org/</span><br><span class="line">2. 解压：tar zxvf zookeeper-3.4.8.tar.gz</span><br><span class="line">3. 重命名 mv zookeeper-3.4.8 /opt/zookeeper</span><br><span class="line">4. 配置/etc/hosts，建议一次性修改所有服务器，避免遗漏</span><br><span class="line">    192.168.0.1    zkserver1</span><br><span class="line">    192.168.0.2    zkserver2</span><br><span class="line">    192.168.0.3    zkserver3</span><br><span class="line">5. 创建配置文件：conf/zoo_sample.cfg conf/zoo.cfg</span><br><span class="line">6. 配置文件zoo.cfg修改如下：</span><br><span class="line">    tickTime=2000</span><br><span class="line">    initLimit=10</span><br><span class="line">    syncLimit=5</span><br><span class="line">    dataLogDir=/opt/zookeeper/logs</span><br><span class="line">    dataDir=/opt/zookeeper/data</span><br><span class="line">    clientPort=2181</span><br><span class="line">    autopurge.snapRetainCount=500</span><br><span class="line">    autopurge.purgeInterval=24</span><br><span class="line">    #格式server.A = B : C : D</span><br><span class="line">    server.1= zkserver1:2888:3888</span><br><span class="line">    server.2= zkserver2:2888:3888</span><br><span class="line">    server.3= zkserver3:2888:3888</span><br><span class="line">7. 创建上一步中配置的两个目录dataLogDir、dataDir</span><br><span class="line">    mkdir -p /opt/zookeeper/&#123;logs,data&#125;</span><br><span class="line">8. 创建serverId标识</span><br><span class="line">    echo &quot;1&quot; &gt; /opt/zookeeper/data/myid</span><br><span class="line">9. 将配置好的内容分发到其它服务器</span><br><span class="line">    scp -r /opt/zookeeper </span><br><span class="line">10. 修改各个服务器上的myid文件与server.A的A一致</span><br><span class="line">11. 各个服务器顺次启动：</span><br><span class="line">    bin/zkServer.sh start</span><br></pre></td></tr></table></figure>
-<h5 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. 启动报错：配置文件错误或者防火墙没有关闭</span><br></pre></td></tr></table></figure>
-<h5 id="状态检查"><a href="#状态检查" class="headerlink" title="状态检查"></a>状态检查</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/zkServer.sh status</span><br></pre></td></tr></table></figure>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
-<p>ZooKeeper是一个开放源码的分布式应用程序协调服务，它包含一个简单的原语集，分布式应用程序可以基于它实现同步服务，配置维护和命名服务等。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">在zookeeper的集群中，各个节点共有下面3种角色和4种状态：</span><br><span class="line">角色：leader,follower,observer</span><br><span class="line">状态：leading,following,observing,looking</span><br><span class="line"></span><br><span class="line">Zookeeper的核心是原子广播，这个机制保证了各个Server之间的同步。实现这个机制的协议叫做Zab协议（ZooKeeper Atomic Broadcast protocol）。Zab协议有两种模式，它们分别是恢复模式（Recovery选主）和广播模式（Broadcast同步）。当服务启动或者在领导者崩溃后，Zab就进入了恢复模式，当领导者被选举出来，且大多数Server完成了和leader的状态同步以后，恢复模式就结束了。状态同步保证了leader和Server具有相同的系统状态。</span><br><span class="line">为了保证事务的顺序一致性，zookeeper采用了递增的事务id号（zxid）来标识事务。所有的提议（proposal）都在被提出的时候加上了zxid。实现中zxid是一个64位的数字，它高32位是epoch用来标识leader关系是否改变，每次一个leader被选出来，它都会有一个新的epoch，标识当前属于那个leader的统治时期。低32位用于递增计数。</span><br><span class="line"></span><br><span class="line">每个Server在工作过程中有4种状态：</span><br><span class="line">LOOKING：当前Server不知道leader是谁，正在搜寻。</span><br><span class="line">LEADING：当前Server即为选举出来的leader。</span><br><span class="line">FOLLOWING：leader已经选举出来，当前Server与之同步。</span><br><span class="line">OBSERVING：observer的行为在大多数情况下与follower完全一致，但是他们不参加选举和投票，而仅仅接受(observing)选举和投票的结果。</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">分布式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/16/zookeeper/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sqoop" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/15/sqoop/">sqoop安装及简单使用</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/15/sqoop/" class="archive-article-date">
-  	<time datetime="2018-08-15T06:39:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">sqoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/15/sqoop/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hive" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/14/hive/">hive安装及简单使用</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/14/hive/" class="archive-article-date">
-  	<time datetime="2018-08-14T12:02:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
-<li>确保本地已经有hadoop环境，因为hive是基于HDFS的</li>
-<li>访问<a href="https://hive.apache.org/" target="_blank" rel="noopener">hive官网</a>下载最新的包，选择基于本地安装好的hadoop版本，hive下载页面有相应的版本说明，我这里用的是2.3.0。</li>
-<li>解压下载下来的压缩包</li>
-<li>复制hive-env.sh.template文件并更名为hive-env.sh，复制hive-default.xml.template文件并更名为hive-site.xml。</li>
-<li><p>修改hive-env.sh文件，增加HADOOP_HOME配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HADOOP_HOME=/Users/xpf/Documents/01develop/99library/hadoop-2.8.3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改hive-site.xml文件，将元数据从默认的derby数据库配置改为mysql数据库，原因有两个，首先derby只能连接一个client，其次我本地使用derby执行hive命令会报莫名其妙的错误，例如：不能初始化数据库。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--hive metastore with mysql--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;jdbc:mysql://localhost:3306/hivemetastore?createDatabaseIfNotExist=true&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;JDBC connect string for a JDBC metastore&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;javax.jdo.option.ConnectionDriverName&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;com.mysql.jdbc.Driver&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;Driver class name for a JDBC metastore&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;javax.jdo.option.ConnectionUserName&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;root&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;username to use against metastore database&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;javax.jdo.option.ConnectionPassword&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;123456&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;password to use against metastore database&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--cli header message--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;hive.cli.print.header&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;Whether to print the names of the columns in query output.&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;hive.cli.print.current.db&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;Whether to include the current database in the Hive prompt.&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改hive-site.xml文件，替换所有变量为实际路径，例如${system:java.io.tmpdir}、${system:user.name}、${hive.session.id}等。</p>
-</li>
-<li><p>启动hive，此时会在mysql中创建上边配置的数据库<strong>hivemetastore</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hive</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>也可以直接hive启动，需要修改环境变量，配置hive的执行文件路径到path。</p>
-</li>
-</ol>
-<h3 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h3><ol>
-<li><p>查看所有数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;show databases;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用指定数据库，default为数据库名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;use default;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看所有表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;show tables;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建表，t1为表名，指定使用制表符 <strong>\t</strong>分割字段，行间用回车换行 <strong>\n</strong> 分割，STORED AS TEXTFILE指定文件存储格式为文本文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;CREATE TABLE t1(id int,username string) ROW FORMAT DELIMITED FIELDS TERMINATED BY &apos;\t&apos;LINES TERMINATED BY &apos;\n&apos;STORED AS TEXTFILE;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>从本地文件导入数据，去掉<em>local</em>就是从HDFS文件导入数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;load data local inpath &apos;/Users/xxx/Desktop/htest.txt&apos; into table t1;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>清空表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">truncate table 表名</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看表结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;describe 表名;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hive</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/14/hive/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -999,8 +347,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
