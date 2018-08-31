@@ -135,6 +135,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ftp-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/31/ftp-java/">java操作FTP服务器文件</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/31/ftp-java/" class="archive-article-date">
+  	<time datetime="2018-08-31T10:03:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="FTP下载"><a href="#FTP下载" class="headerlink" title="FTP下载"></a>FTP下载</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">FTPClient ftpClient = new FTPClient();</span><br><span class="line">ftpClient.connect(FileTransportConfig.sourceURL, FileTransportConfig.port);</span><br><span class="line">if (!FTPReply.isPositiveCompletion(ftpClient.getReplyCode())) &#123;</span><br><span class="line">    ftpClient.disconnect();</span><br><span class="line">    throw new Exception(&quot;FTP连接失败&quot;);</span><br><span class="line">&#125;</span><br><span class="line">if (!ftpClient.login(FileTransportConfig.username, FileTransportConfig.password)) &#123;</span><br><span class="line">    throw new Exception(&quot;FTP登录失败&quot;);</span><br><span class="line">&#125;</span><br><span class="line">File localFile = new File(localPath + fileName);</span><br><span class="line">OutputStream os = new FileOutputStream(localFile);</span><br><span class="line">if (isConnectioned()&amp;&amp;ftpClient.retrieveFile(FileTransportConfig.remotePath + fileName, os)) &#123;</span><br><span class="line">    os.close();</span><br><span class="line">    //关闭FTP连接</span><br><span class="line">    ftpClient.noop();</span><br><span class="line">    ftpClient.logout();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><font color="red">如果没有任何错误提示，总是下载失败，那就是FTP连接模式问题，增加以下代码到retrieveFile方法之前即可解决</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpClient.enterLocalPassiveMode();</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ftp</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文件下载</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/31/ftp-java/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-elasticsearch" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -853,125 +932,6 @@
 
 
   
-    <article id="post-hive" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/14/hive/">hive安装及简单使用</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/14/hive/" class="archive-article-date">
-  	<time datetime="2018-08-14T12:02:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
-<li>确保本地已经有hadoop环境，因为hive是基于HDFS的</li>
-<li>访问<a href="https://hive.apache.org/" target="_blank" rel="noopener">hive官网</a>下载最新的包，选择基于本地安装好的hadoop版本，hive下载页面有相应的版本说明，我这里用的是2.3.0。</li>
-<li>解压下载下来的压缩包</li>
-<li>复制hive-env.sh.template文件并更名为hive-env.sh，复制hive-default.xml.template文件并更名为hive-site.xml。</li>
-<li><p>修改hive-env.sh文件，增加HADOOP_HOME配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HADOOP_HOME=/Users/xpf/Documents/01develop/99library/hadoop-2.8.3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改hive-site.xml文件，将元数据从默认的derby数据库配置改为mysql数据库，原因有两个，首先derby只能连接一个client，其次我本地使用derby执行hive命令会报莫名其妙的错误，例如：不能初始化数据库。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--hive metastore with mysql--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;jdbc:mysql://localhost:3306/hivemetastore?createDatabaseIfNotExist=true&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;JDBC connect string for a JDBC metastore&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;javax.jdo.option.ConnectionDriverName&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;com.mysql.jdbc.Driver&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;Driver class name for a JDBC metastore&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;javax.jdo.option.ConnectionUserName&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;root&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;username to use against metastore database&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;javax.jdo.option.ConnectionPassword&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;123456&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;password to use against metastore database&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--cli header message--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;hive.cli.print.header&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;Whether to print the names of the columns in query output.&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">   &lt;name&gt;hive.cli.print.current.db&lt;/name&gt;</span><br><span class="line">   &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">   &lt;description&gt;Whether to include the current database in the Hive prompt.&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改hive-site.xml文件，替换所有变量为实际路径，例如${system:java.io.tmpdir}、${system:user.name}、${hive.session.id}等。</p>
-</li>
-<li><p>启动hive，此时会在mysql中创建上边配置的数据库<strong>hivemetastore</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hive</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>也可以直接hive启动，需要修改环境变量，配置hive的执行文件路径到path。</p>
-</li>
-</ol>
-<h3 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h3><ol>
-<li><p>查看所有数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;show databases;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用指定数据库，default为数据库名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;use default;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看所有表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;show tables;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建表，t1为表名，指定使用制表符 <strong>\t</strong>分割字段，行间用回车换行 <strong>\n</strong> 分割，STORED AS TEXTFILE指定文件存储格式为文本文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;CREATE TABLE t1(id int,username string) ROW FORMAT DELIMITED FIELDS TERMINATED BY &apos;\t&apos;LINES TERMINATED BY &apos;\n&apos;STORED AS TEXTFILE;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>从本地文件导入数据，去掉<em>local</em>就是从HDFS文件导入数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;load data local inpath &apos;/Users/xxx/Desktop/htest.txt&apos; into table t1;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>清空表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">truncate table 表名</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看表结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hive</span><br><span class="line">hive&gt;describe 表名;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hive</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/14/hive/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1062,6 +1022,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ftp</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">大数据</a>
               </li>
             
@@ -1070,11 +1034,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hive</a>
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+                <a href="javascript:void(0)" class="js-tag color5">hive</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -1086,15 +1050,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">sqoop</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hadoop</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">mapreduce</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">sqoop</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件下载</a>
               </li>
             
             <div class="clearfix"></div>

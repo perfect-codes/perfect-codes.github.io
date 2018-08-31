@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>mahout安装及简单使用 | miracle的博客</title>
+  <title>java操作FTP服务器文件 | miracle的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mahout是一个机器学习领域算法库，基于hadoop，常用于推荐引擎、分类、聚类。">
-<meta name="keywords" content="个人,博客,技术">
+  <meta name="description" content="FTP下载1234567891011121314151617FTPClient ftpClient = new FTPClient();ftpClient.connect(FileTransportConfig.sourceURL, FileTransportConfig.port);if (!FTPReply.isPositiveCompletion(ftpClient.getReplyCode">
+<meta name="keywords" content="ftp,文件下载">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mahout安装及简单使用">
-<meta property="og:url" content="http://yoursite.com/2018/08/17/mahout/index.html">
+<meta property="og:title" content="java操作FTP服务器文件">
+<meta property="og:url" content="http://yoursite.com/2018/08/31/ftp-java/index.html">
 <meta property="og:site_name" content="miracle的博客">
-<meta property="og:description" content="mahout是一个机器学习领域算法库，基于hadoop，常用于推荐引擎、分类、聚类。">
+<meta property="og:description" content="FTP下载1234567891011121314151617FTPClient ftpClient = new FTPClient();ftpClient.connect(FileTransportConfig.sourceURL, FileTransportConfig.port);if (!FTPReply.isPositiveCompletion(ftpClient.getReplyCode">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-17T06:22:21.441Z">
+<meta property="og:updated_time" content="2018-08-31T10:16:25.080Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mahout安装及简单使用">
-<meta name="twitter:description" content="mahout是一个机器学习领域算法库，基于hadoop，常用于推荐引擎、分类、聚类。">
+<meta name="twitter:title" content="java操作FTP服务器文件">
+<meta name="twitter:description" content="FTP下载1234567891011121314151617FTPClient ftpClient = new FTPClient();ftpClient.connect(FileTransportConfig.sourceURL, FileTransportConfig.port);if (!FTPReply.isPositiveCompletion(ftpClient.getReplyCode">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -137,29 +137,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-mahout" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ftp-java" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      mahout安装及简单使用
+      java操作FTP服务器文件
     </h1>
   
 
         
-        <a href="/2018/08/17/mahout/" class="archive-article-date">
-  	<time datetime="2018-08-17T06:19:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-17</time>
+        <a href="/2018/08/31/ftp-java/" class="archive-article-date">
+  	<time datetime="2018-08-31T10:03:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>mahout是一个机器学习领域算法库，基于hadoop，常用于推荐引擎、分类、聚类。</p>
-</blockquote>
+        <h3 id="FTP下载"><a href="#FTP下载" class="headerlink" title="FTP下载"></a>FTP下载</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">FTPClient ftpClient = new FTPClient();</span><br><span class="line">ftpClient.connect(FileTransportConfig.sourceURL, FileTransportConfig.port);</span><br><span class="line">if (!FTPReply.isPositiveCompletion(ftpClient.getReplyCode())) &#123;</span><br><span class="line">    ftpClient.disconnect();</span><br><span class="line">    throw new Exception(&quot;FTP连接失败&quot;);</span><br><span class="line">&#125;</span><br><span class="line">if (!ftpClient.login(FileTransportConfig.username, FileTransportConfig.password)) &#123;</span><br><span class="line">    throw new Exception(&quot;FTP登录失败&quot;);</span><br><span class="line">&#125;</span><br><span class="line">File localFile = new File(localPath + fileName);</span><br><span class="line">OutputStream os = new FileOutputStream(localFile);</span><br><span class="line">if (isConnectioned()&amp;&amp;ftpClient.retrieveFile(FileTransportConfig.remotePath + fileName, os)) &#123;</span><br><span class="line">    os.close();</span><br><span class="line">    //关闭FTP连接</span><br><span class="line">    ftpClient.noop();</span><br><span class="line">    ftpClient.logout();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><font color="red">如果没有任何错误提示，总是下载失败，那就是FTP连接模式问题，增加以下代码到retrieveFile方法之前即可解决</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpClient.enterLocalPassiveMode();</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -199,6 +198,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ftp</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文件下载</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -249,7 +263,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/17/mahout/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/31/ftp-java/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -263,18 +277,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/17/flume/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          flume
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/16/kafka/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">kafka安装及简单使用</div>
+    <a href="/2018/08/28/elasticsearch/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">elasticsearch安装及简单使用</div>
       <i class="icon-circle-right"></i>
     </a>
   
