@@ -135,6 +135,175 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-git-command" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/05/git-command/">git常用命令</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/05/git-command/" class="archive-article-date">
+  	<time datetime="2018-09-05T06:30:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.创建分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名称</span><br></pre></td></tr></table></figure></p>
+<p>2.删除本地分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d 分支名称</span><br></pre></td></tr></table></figure></p>
+<p>3.删除远程分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push origin --delete 分支名称</span><br><span class="line">或者</span><br><span class="line">git push origin :分支名称</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">命令</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/05/git-command/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-vue-bootstrap" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/03/vue-bootstrap/">vue整合bootstrap</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/03/vue-bootstrap/" class="archive-article-date">
+  	<time datetime="2018-09-03T12:07:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="创建vue项目"><a href="#创建vue项目" class="headerlink" title="创建vue项目"></a>创建vue项目</h3><p>1.安装vue-cli3<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure></p>
+<p>2.创建vue项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create helloworld</span><br></pre></td></tr></table></figure></p>
+<p>3.启动模版项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd helloworld</span><br><span class="line">yarn run serve</span><br></pre></td></tr></table></figure></p>
+<p>4.浏览器访问<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p>
+<h3 id="整合bootstrap-方式一"><a href="#整合bootstrap-方式一" class="headerlink" title="整合bootstrap(方式一)"></a>整合bootstrap(<font color="red">方式一</font>)</h3><p>1.npm安装bootstrap4<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install bootstrap</span><br></pre></td></tr></table></figure></p>
+<p>2.项目引入bootstrap<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">修改main.js文件，增加如下内容index</span><br><span class="line">import &apos;bootstrap&apos;</span><br><span class="line">import &apos;bootstrap/dist/css/bootstrap.min.css&apos;</span><br><span class="line">import &apos;bootstrap/dist/css/bootstrap-reboot.min.css&apos;</span><br></pre></td></tr></table></figure></p>
+<p>3.测试使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">修改HelloWorld.vue文件，将&lt;template&gt;&lt;/template&gt;间的内容替换为</span><br><span class="line">&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;按钮&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<p>4.浏览器查看效果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">正常情况下，修改保存项目文件，浏览器会自动刷新，如果不自动刷新，手动刷新查看效果</span><br></pre></td></tr></table></figure></p>
+<p><font color="red">项目可能启动提示缺少组件错误，根据提示安装jquery和poper.js即可</font></p>
+<h3 id="bootstrap提供了vue版本bootstrap组件：bootstrap-vue-方式二"><a href="#bootstrap提供了vue版本bootstrap组件：bootstrap-vue-方式二" class="headerlink" title="bootstrap提供了vue版本bootstrap组件：bootstrap-vue(方式二)"></a>bootstrap提供了vue版本bootstrap组件：bootstrap-vue(<font color="red">方式二</font>)</h3><p>1.安装bootstrap-vue<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i bootstrap-vue 或者</span><br><span class="line">yarn add bootstrap-vue</span><br></pre></td></tr></table></figure></p>
+<p>2.使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">修改main.js文件，增加如下内容index</span><br><span class="line">import BootstrapVue from &apos;bootstrap-vue&apos;</span><br><span class="line">import &apos;bootstrap/dist/css/bootstrap.css&apos;</span><br><span class="line">import &apos;bootstrap-vue/dist/bootstrap-vue.css&apos;</span><br><span class="line"></span><br><span class="line">Vue.use(BootstrapVue);</span><br></pre></td></tr></table></figure></p>
+<p>3.bootstrap-vue官网地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://bootstrap-vue.js.org/</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/03/vue-bootstrap/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ftp-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -771,167 +940,6 @@
 
 
   
-    <article id="post-zookeeper" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/16/zookeeper/">zookeeper集群搭建及介绍</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/16/zookeeper/" class="archive-article-date">
-  	<time datetime="2018-08-16T01:33:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><h5 id="jdk环境"><a href="#jdk环境" class="headerlink" title="jdk环境"></a>jdk环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html</span><br><span class="line">2. RPM安装命令：rpm -ivh RPM包名</span><br></pre></td></tr></table></figure>
-<h5 id="zookeeper安装"><a href="#zookeeper安装" class="headerlink" title="zookeeper安装"></a>zookeeper安装</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">1. 官网地址：http://zookeeper.apache.org/</span><br><span class="line">2. 解压：tar zxvf zookeeper-3.4.8.tar.gz</span><br><span class="line">3. 重命名 mv zookeeper-3.4.8 /opt/zookeeper</span><br><span class="line">4. 配置/etc/hosts，建议一次性修改所有服务器，避免遗漏</span><br><span class="line">    192.168.0.1    zkserver1</span><br><span class="line">    192.168.0.2    zkserver2</span><br><span class="line">    192.168.0.3    zkserver3</span><br><span class="line">5. 创建配置文件：conf/zoo_sample.cfg conf/zoo.cfg</span><br><span class="line">6. 配置文件zoo.cfg修改如下：</span><br><span class="line">    tickTime=2000</span><br><span class="line">    initLimit=10</span><br><span class="line">    syncLimit=5</span><br><span class="line">    dataLogDir=/opt/zookeeper/logs</span><br><span class="line">    dataDir=/opt/zookeeper/data</span><br><span class="line">    clientPort=2181</span><br><span class="line">    autopurge.snapRetainCount=500</span><br><span class="line">    autopurge.purgeInterval=24</span><br><span class="line">    #格式server.A = B : C : D</span><br><span class="line">    server.1= zkserver1:2888:3888</span><br><span class="line">    server.2= zkserver2:2888:3888</span><br><span class="line">    server.3= zkserver3:2888:3888</span><br><span class="line">7. 创建上一步中配置的两个目录dataLogDir、dataDir</span><br><span class="line">    mkdir -p /opt/zookeeper/&#123;logs,data&#125;</span><br><span class="line">8. 创建serverId标识</span><br><span class="line">    echo &quot;1&quot; &gt; /opt/zookeeper/data/myid</span><br><span class="line">9. 将配置好的内容分发到其它服务器</span><br><span class="line">    scp -r /opt/zookeeper </span><br><span class="line">10. 修改各个服务器上的myid文件与server.A的A一致</span><br><span class="line">11. 各个服务器顺次启动：</span><br><span class="line">    bin/zkServer.sh start</span><br></pre></td></tr></table></figure>
-<h5 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. 启动报错：配置文件错误或者防火墙没有关闭</span><br></pre></td></tr></table></figure>
-<h5 id="状态检查"><a href="#状态检查" class="headerlink" title="状态检查"></a>状态检查</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/zkServer.sh status</span><br></pre></td></tr></table></figure>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
-<p>ZooKeeper是一个开放源码的分布式应用程序协调服务，它包含一个简单的原语集，分布式应用程序可以基于它实现同步服务，配置维护和命名服务等。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">在zookeeper的集群中，各个节点共有下面3种角色和4种状态：</span><br><span class="line">角色：leader,follower,observer</span><br><span class="line">状态：leading,following,observing,looking</span><br><span class="line"></span><br><span class="line">Zookeeper的核心是原子广播，这个机制保证了各个Server之间的同步。实现这个机制的协议叫做Zab协议（ZooKeeper Atomic Broadcast protocol）。Zab协议有两种模式，它们分别是恢复模式（Recovery选主）和广播模式（Broadcast同步）。当服务启动或者在领导者崩溃后，Zab就进入了恢复模式，当领导者被选举出来，且大多数Server完成了和leader的状态同步以后，恢复模式就结束了。状态同步保证了leader和Server具有相同的系统状态。</span><br><span class="line">为了保证事务的顺序一致性，zookeeper采用了递增的事务id号（zxid）来标识事务。所有的提议（proposal）都在被提出的时候加上了zxid。实现中zxid是一个64位的数字，它高32位是epoch用来标识leader关系是否改变，每次一个leader被选出来，它都会有一个新的epoch，标识当前属于那个leader的统治时期。低32位用于递增计数。</span><br><span class="line"></span><br><span class="line">每个Server在工作过程中有4种状态：</span><br><span class="line">LOOKING：当前Server不知道leader是谁，正在搜寻。</span><br><span class="line">LEADING：当前Server即为选举出来的leader。</span><br><span class="line">FOLLOWING：leader已经选举出来，当前Server与之同步。</span><br><span class="line">OBSERVING：observer的行为在大多数情况下与follower完全一致，但是他们不参加选举和投票，而仅仅接受(observing)选举和投票的结果。</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">分布式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/16/zookeeper/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sqoop" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/15/sqoop/">sqoop安装及简单使用</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/15/sqoop/" class="archive-article-date">
-  	<time datetime="2018-08-15T06:39:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">sqoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/15/sqoop/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1022,15 +1030,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ftp</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">大数据</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">搜索引擎</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ftp</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件下载</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">命令</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -1050,6 +1070,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">sqoop</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hadoop</a>
               </li>
             
@@ -1058,11 +1082,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">sqoop</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文件下载</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
             <div class="clearfix"></div>
