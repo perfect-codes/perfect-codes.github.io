@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>java操作FTP服务器文件 | miracle的博客</title>
+  <title>algorithms | miracle的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="FTP下载1234567891011121314151617FTPClient ftpClient = new FTPClient();ftpClient.connect(FileTransportConfig.sourceURL, FileTransportConfig.port);if (!FTPReply.isPositiveCompletion(ftpClient.getReplyCode">
-<meta name="keywords" content="ftp,文件下载">
+  <meta name="description" content="Snowflake（分布式ID生成算法 from Twitter）12341.利用位运算计算出5位能表示的最大正整数是多少max = -1L^(-1L &amp;lt;&amp;lt; 5L)2.防止溢出val = (val + 1) &amp;amp; max;">
+<meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java操作FTP服务器文件">
-<meta property="og:url" content="http://yoursite.com/2018/08/31/ftp-java/index.html">
+<meta property="og:title" content="algorithms">
+<meta property="og:url" content="http://yoursite.com/2018/11/29/algorithms/index.html">
 <meta property="og:site_name" content="miracle的博客">
-<meta property="og:description" content="FTP下载1234567891011121314151617FTPClient ftpClient = new FTPClient();ftpClient.connect(FileTransportConfig.sourceURL, FileTransportConfig.port);if (!FTPReply.isPositiveCompletion(ftpClient.getReplyCode">
+<meta property="og:description" content="Snowflake（分布式ID生成算法 from Twitter）12341.利用位运算计算出5位能表示的最大正整数是多少max = -1L^(-1L &amp;lt;&amp;lt; 5L)2.防止溢出val = (val + 1) &amp;amp; max;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-31T10:16:25.080Z">
+<meta property="og:updated_time" content="2018-11-29T12:00:40.208Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java操作FTP服务器文件">
-<meta name="twitter:description" content="FTP下载1234567891011121314151617FTPClient ftpClient = new FTPClient();ftpClient.connect(FileTransportConfig.sourceURL, FileTransportConfig.port);if (!FTPReply.isPositiveCompletion(ftpClient.getReplyCode">
+<meta name="twitter:title" content="algorithms">
+<meta name="twitter:description" content="Snowflake（分布式ID生成算法 from Twitter）12341.利用位运算计算出5位能表示的最大正整数是多少max = -1L^(-1L &amp;lt;&amp;lt; 5L)2.防止溢出val = (val + 1) &amp;amp; max;">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -137,28 +137,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ftp-java" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-algorithms" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      java操作FTP服务器文件
+      algorithms
     </h1>
   
 
         
-        <a href="/2018/08/31/ftp-java/" class="archive-article-date">
-  	<time datetime="2018-08-31T10:03:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-31</time>
+        <a href="/2018/11/29/algorithms/" class="archive-article-date">
+  	<time datetime="2018-11-29T11:47:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="FTP下载"><a href="#FTP下载" class="headerlink" title="FTP下载"></a>FTP下载</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">FTPClient ftpClient = new FTPClient();</span><br><span class="line">ftpClient.connect(FileTransportConfig.sourceURL, FileTransportConfig.port);</span><br><span class="line">if (!FTPReply.isPositiveCompletion(ftpClient.getReplyCode())) &#123;</span><br><span class="line">    ftpClient.disconnect();</span><br><span class="line">    throw new Exception(&quot;FTP连接失败&quot;);</span><br><span class="line">&#125;</span><br><span class="line">if (!ftpClient.login(FileTransportConfig.username, FileTransportConfig.password)) &#123;</span><br><span class="line">    throw new Exception(&quot;FTP登录失败&quot;);</span><br><span class="line">&#125;</span><br><span class="line">File localFile = new File(localPath + fileName);</span><br><span class="line">OutputStream os = new FileOutputStream(localFile);</span><br><span class="line">if (isConnectioned()&amp;&amp;ftpClient.retrieveFile(FileTransportConfig.remotePath + fileName, os)) &#123;</span><br><span class="line">    os.close();</span><br><span class="line">    //关闭FTP连接</span><br><span class="line">    ftpClient.noop();</span><br><span class="line">    ftpClient.logout();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><font color="red">如果没有任何错误提示，总是下载失败，那就是FTP连接模式问题，增加以下代码到retrieveFile方法之前即可解决</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpClient.enterLocalPassiveMode();</span><br></pre></td></tr></table></figure></p>
+        <h4 id="Snowflake（分布式ID生成算法-from-Twitter）"><a href="#Snowflake（分布式ID生成算法-from-Twitter）" class="headerlink" title="Snowflake（分布式ID生成算法 from Twitter）"></a>Snowflake（分布式ID生成算法 from Twitter）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.利用位运算计算出5位能表示的最大正整数是多少</span><br><span class="line">max = -1L^(-1L &lt;&lt; 5L)</span><br><span class="line">2.防止溢出</span><br><span class="line">val = (val + 1) &amp; max;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -203,11 +202,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ftp</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文件下载</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -263,7 +258,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/31/ftp-java/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/29/algorithms/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -277,18 +272,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/09/03/vue-bootstrap/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          vue整合bootstrap
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/28/elasticsearch/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">elasticsearch安装及简单使用</div>
+    <a href="/2018/09/05/git-command/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git常用命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
